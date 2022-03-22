@@ -6,7 +6,7 @@ NAME = megaphone
 
 SRCS += megaphone.cpp\
 
-OBJS = $(patsubst %.c, $.o, $(SRCS))
+OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 
 all:
 		@$(MAKE) $(NAME)
