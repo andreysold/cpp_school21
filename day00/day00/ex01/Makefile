@@ -20,7 +20,7 @@ clean:
 
 fclean: 	clean
 			@$(RM)	 $(NAME)
-			@echo "ex00 Deleted 😬"
+			@echo "ex01 Deleted 😬"
 
 re:			fclean all
 
