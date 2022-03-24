@@ -3,10 +3,6 @@
 #include "PhoneBook.hpp"
 #include <iomanip>
 
-
-
-
-
 int main(void)
 {
     int flag = 1;

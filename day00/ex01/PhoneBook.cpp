@@ -51,11 +51,13 @@ void    PhoneBook::search() {
 	}
 	else
 	{
-		if (command >= count)
+		if (count == 0)
+			std::cout << "Empty Phonebook\n";
+		else if (command >= count)
 			std::cout << "Large index\n";
 		else
 		{
-			for (int i = 0; i < count - 1; i++) {
+			for (int i = 0; i < count; i++) {
 				if (i == command)
 					people[command].getInfo(i);
 			}
