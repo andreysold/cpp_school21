@@ -2,9 +2,12 @@ CC = g++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = str
+NAME = violence
 
 SRCS =	main.cpp\
+		HumanB.cpp\
+		HumanA.cpp\
+		Weapon.cpp\
 
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 

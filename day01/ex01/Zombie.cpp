@@ -15,4 +15,4 @@ Zombie::~Zombie(){
 
 void    Zombie::getName() {
     std::cout << "Funny Zombie name is " << this->name << std::endl;
-}
+};
