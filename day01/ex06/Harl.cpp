@@ -21,12 +21,33 @@ void    Harl::error(void) {
 	std::cout << "ERROR: This is unacceptable! I want to speak to the manager now." << std::endl;
 };
 
+void	Harl::circleCd(std::string *levelUp, std::string level, int *i)
+{
+	for (; (*i) < 4; (*i)++) {
+		if (level == levelUp[(*i)])
+			break;
+	}
+}
+
 void    Harl::complain(std::string level)
 {
+	int i = 0;
 	std::string levelUp[4] = {"debug", "info", "warning", "error"};
 	void	(Harl::*ptrFunc[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	for (int i = 0; i < 4; i++) {
-		if (level == levelUp[i])
-			(this->*ptrFunc[i])();
+	circleCd(levelUp, level, &i);
+	switch (i)
+	{
+	case 0:
+		(this->debug());
+	case 1:
+		(this->info());
+	case 2:
+		(this->warning());
+	case 3:
+		(this->error());
+	default:
+		std::cout << "Undefined case\n";
+		break;
 	}
+	
 };
