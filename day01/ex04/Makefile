@@ -4,6 +4,8 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = sed
 
+FILE = text.replace\
+
 SRCS =	main.cpp\
 		ReplaceString.cpp\
 
@@ -21,7 +23,8 @@ clean:
 			@echo ".o Deleted 🗿"
 
 fclean: 	clean
-			@$(RM)	 $(NAME)
+			@rm -f	 $(NAME)
+			@rm -f	 $(FILE)
 			@echo "Deleted 😬"
 
 re:			fclean all

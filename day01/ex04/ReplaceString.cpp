@@ -20,7 +20,7 @@ void    ReplaceString::ReplaceStr(std::string word1, std::string word2)
             this->s2 += '\n';
         }
     }
-    std::ofstream new_file(this->file_name + "_replace");
+    std::ofstream new_file(this->file_name + ".replace");
     int i = 0;
     while (i < s2.size())
     {
