@@ -15,15 +15,16 @@ int	Fixed::getRawBits(void) const {
 };
 
 Fixed::Fixed(const Fixed &other){
-	value = other.value;
 	std::cout << "Copy constructor called" << std::endl;
+	value = other.getRawBits();
 };
 
 Fixed	& Fixed::operator=(const Fixed& rhs) {
-	if (this != &rhs) {
-		value = rhs.value;
-	}
 	std::cout << "Copy assignment operator called" << std::endl;
+	this->value = rhs.getRawBits();
 	return (*this);
 };
 
+void	Fixed::setRawBits(int const raw) {
+	this->value = raw;
+};
