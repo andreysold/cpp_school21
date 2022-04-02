@@ -16,12 +16,14 @@ $(NAME): $(OBJS)
 	$(CC) $(FLAGS) -o $(NAME) $(OBJS)
 
 clean:
-	@rm -f $(OBJS)
+		@rm -f $(OBJS)
+		@echo ".o Deleted 🗿"
 
-fclean: clean
-	@rm -f	 $(NAME)
-	@rm -f	 $(FILE)
+fclean: 	clean
+			@rm -f	 $(NAME)
+			@rm -f	 $(FILE)
+			@echo "Deleted 😬"
 
-re: fclean all
+re:			fclean all
 
 .PHONY: all clean fclean re
