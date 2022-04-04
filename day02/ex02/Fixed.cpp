@@ -119,4 +119,52 @@ Fixed   &Fixed::max(Fixed &one, Fixed &two)
     if (one > two)
         return (one);
     return (two);
-}
+};
+
+const Fixed &Fixed::max(const Fixed &one, const Fixed &two)
+{
+    if (one > two)
+        return (one);
+    return (two);
+};
+
+
+Fixed   &Fixed::min(Fixed &one, Fixed &two)
+{
+    if (one < two)
+        return (one);
+    return (two);
+};
+
+const Fixed &Fixed::min(Fixed const  &one, Fixed const &two)
+{
+    if (one < two)
+        return (one);
+    return (two);
+};
+
+Fixed   &Fixed::operator++(void)
+{
+    this->_fixNumPoint++;
+    return (*this);
+};
+
+Fixed   Fixed::operator++(int)
+{
+    Fixed   last(*this);
+    ++(*this);
+    return (last);
+};
+
+Fixed   Fixed::operator--(int)
+{
+    Fixed   last(*this);
+    --(*this);
+    return (last);
+};
+
+Fixed   &Fixed::operator--(void)
+{
+    this->_fixNumPoint--;
+    return (*this);
+};
