@@ -1,4 +1,4 @@
-CC = g++
+CC = clang++
 
 FLAGS = -std=c++98 -Wall -Wextra -Werror
 
