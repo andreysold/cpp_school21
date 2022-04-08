@@ -2,29 +2,29 @@
 #include "Fixed.hpp"
 #include <fstream>
 Fixed::Fixed() : _fixNumPoint(0) {
-    std::cout << "default constructor called" << '\n';
+    std::cout << "default constructor called" << std::endl;
 };
 
 Fixed::~Fixed() {
-    std::cout << "default destructor called" << '\n';
+    std::cout << "default destructor called" << std::endl;
 }
 
 Fixed::Fixed(int const number) {
-    std::cout << "Int constructor called" << '\n';
+    std::cout << "Int constructor called" << std::endl;
     this->_fixNumPoint = number << this->_fracBits;
 }
 
 Fixed::Fixed(float const number) {
     float power;
     power = pow(2, this->_fracBits);
-    std::cout << "float constructor called" << '\n';
+    std::cout << "float constructor called" << std::endl;
     this->_fixNumPoint = round(number * power);
 };
 
 Fixed::Fixed(Fixed const &other) {
    
-    this->_fixNumPoint= other.getRawBits();
-    std::cout << "Copy constructor called\n";
+    this->_fixNumPoint= other._fixNumPoint;
+    std::cout << "Copy constructor called" << std::endl;
 };
 
 float   Fixed::toFloat(void) const {
@@ -36,8 +36,8 @@ float   Fixed::toFloat(void) const {
 
 Fixed   &Fixed::operator=(const Fixed &other)
 {
-    std::cout << "Copy assigment operator called" << '\n';
-    this->_fixNumPoint = other.getRawBits();
+    std::cout << "Copy assigment operator called" << std::endl;
+    this->_fixNumPoint = other._fixNumPoint;
     return (*this);
 };
 
@@ -47,7 +47,7 @@ int     Fixed::toInt(void) const {
 };
 
 int Fixed::getRawBits(void) const {
-    std::cout << "GetRawBits func called" << '\n';
+    std::cout << "GetRawBits func called" << std::endl;
     return this->_fixNumPoint;
 };
 
