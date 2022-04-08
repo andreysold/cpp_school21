@@ -45,6 +45,7 @@ void    Harl::complain(std::string level)
 		(this->warning());
 	case 3:
 		(this->error());
+		break ;
 	default:
 		std::cout << "Undefined case\n";
 		break;

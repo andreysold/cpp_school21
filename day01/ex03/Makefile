@@ -1,4 +1,4 @@
-CC = g++
+CC = clang++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -16,7 +16,7 @@ all:
 
 $(NAME): $(OBJS)
 		@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
-		@echo "ex02 is ready to use ✅ "
+		@echo "ex03 is ready to use ✅ "
 clean:
 			@rm -f	$(OBJS)
 			@echo ".o Deleted 🗿"

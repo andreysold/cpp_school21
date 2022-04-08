@@ -12,7 +12,7 @@ int main()
     newZomb = zombieHorde(N, name);
     if (!newZomb)
     {
-        std::cout << "Didnt allocate memmory for newZomb" << std::endl;
+        std::cout << "Didnt allocate memory for newZomb" << std::endl;
         return (-1);
     }
     for (int i = 0; i < N; i++) {
