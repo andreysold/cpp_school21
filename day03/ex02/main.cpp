@@ -8,19 +8,19 @@
 int main(void)
 {
     ClapTrap objB("John");
-    ScavTrap objC("Vert");
+	ScavTrap objC("Vert");
+	objB.beRepaired(10);
+	objC.attack("John");
+	objB.takeDamage(objC.getDamage());
 
- objB.beRepaired(10);
-
- objC.attack("John");
- objB.takeDamage(objC.getDamage());
-
- {
-  FragTrap objD("Bud");
-  objD.highFivesGuys();
-  objD.attack("John");
- }
- objB.beRepaired(10);
-
- objC.guardGate();
+// 	{
+		FragTrap objD("Bud");
+		objD.highFivesGuys();
+		objD.attack("John");
+// 	}
+	objB.beRepaired(10);
+	objC.guardGate();
+	ClapTrap f1(objB);
+	ScavTrap f2(objC);
+	FragTrap f3(objD);
 }

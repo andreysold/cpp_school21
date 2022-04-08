@@ -4,22 +4,22 @@
 
 ClapTrap::ClapTrap(std::string name) : name(name), hitPoint(10), energyPoint(1), damagePoint(2)
 {
-    std::cout << "Constructor called" << std::endl;
+    std::cout << "ClapTrap Constructor called" << std::endl;
 };
 
 ClapTrap::ClapTrap() : hitPoint(10), energyPoint(10), damagePoint(0)
 {
-    std::cout << "Constructor called" << std::endl;
+    std::cout << "ClapTrap Constructor called" << std::endl;
 };
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "ClapTrap Destructor called" << std::endl;
 };
 
 ClapTrap::ClapTrap(const ClapTrap & other)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "ClapTrap Copy constructor called" << std::endl;
     *this = other;
 };
 
@@ -34,7 +34,7 @@ unsigned int ClapTrap::getDamage(void)
 }
 ClapTrap    &ClapTrap::operator=(const ClapTrap &other)
 {
-    std::cout << "Copy operator assigment called" << std::endl;
+    std::cout << "ClapTrap Copy operator assigment called" << std::endl;
     this->damagePoint = other.damagePoint;
     this->energyPoint = other.energyPoint;
     this->hitPoint = other.hitPoint;

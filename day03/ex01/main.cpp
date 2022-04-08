@@ -15,13 +15,8 @@ int main(void)
     objC.attack("John");
     objB.takeDamage(objC.getDamage());
 
-    // objC.displayInfo();
-    // objB.displayInfo();
-
     objB.beRepaired(10);
 
     objC.guardGate();
-
-
- return (0);
+ 	return (0);
 }

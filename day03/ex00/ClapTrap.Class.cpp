@@ -38,7 +38,10 @@ unsigned int ClapTrap::getDamage(void)
 ClapTrap    &ClapTrap::operator=(const ClapTrap &other)
 {
     std::cout << "Copy operator assigment called" << std::endl;
-    (*this) = other;
+    (*this).name = other.name;
+	(*this).hitPoint = other.hitPoint;
+	(*this).energyPoint = other.energyPoint;
+	(*this).damagePoint = other.damagePoint;
     return (*this);
 };
 
