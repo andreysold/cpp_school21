@@ -1,6 +1,7 @@
 #include <iostream>
-
+//#include "l.h"
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 #include <iomanip>
 int main()
 {
@@ -8,10 +9,9 @@ int main()
 	try {
 		Bureaucrat *f1 = new Bureaucrat("Jon", 1);
 		Bureaucrat *f2 = new Bureaucrat(*f1);
-		f1->displayInfo();
-		f1->decGrade();
-		f1->displayInfo();
-		std::cout << *f1 << std::endl;
+
+		Form	*form = new Form("CDO", false, 11, 1);
+
 		delete f1;
 		delete f2;
 	}

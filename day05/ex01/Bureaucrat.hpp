@@ -1,9 +1,10 @@
-#ifndef BUREAUCRAT_HPP_
-#define BUREAUCRAT_HPP_
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
 #include <exception>
 #include <iostream>
 #include <fstream>
-
+#include "Form.hpp"
+#include "Bureaucrat.hpp"
 class Bureaucrat
 {
 private:
@@ -29,7 +30,7 @@ public:
 //	void	setGrage(void); // ?
 	void	incGrage(void);
 	void	decGrade(void);
-
+	void	signForm(const Form &form);
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &rhs);

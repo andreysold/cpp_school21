@@ -1,8 +1,6 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
 
-
-
 Bureaucrat::Bureaucrat()
 {
 	std::cout << "Bureaucrat constructor called" << std::endl;
@@ -63,12 +61,12 @@ void	Bureaucrat::decGrade(void)
 }
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("Exception: grade too high");
+	return ("Bureaucrat: Exception: grade too high");
 };
 
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ("Exception: grade to low");
+	return ("Bureaucrat: Exception: grade to low");
 };
 
 void	Bureaucrat::displayInfo() const
@@ -82,3 +80,11 @@ std::ostream &operator<<(std::ostream &out, const Bureaucrat &rhs)
 	out << rhs.getName() << " , bureaucrat grade " << rhs.getGrade();
 	return (out);
 };
+
+
+
+//void	Bureaucrat::signForm(const Form &form)
+//{
+//	form.beSigned(*this);
+//
+//}
