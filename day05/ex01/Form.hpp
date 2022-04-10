@@ -27,6 +27,10 @@ public:
 	Form(const Form &rhs);
 	Form &operator=(const Form &rhs);
 	void	beSigned(Bureaucrat &h);
+	std::string getName() const;
+	bool		getStatus() const;
+	int 		getGradeSign() const;
+	int 		getGradeExecute() const;
 };
 
 std::ostream &operator<<(std::ostream &out, const Form &rhs);
