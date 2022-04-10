@@ -5,7 +5,7 @@
 #include <fstream>
 #include "Bureaucrat.hpp"
 
-
+class Bureaucrat;
 
 class Form
 {
@@ -26,7 +26,7 @@ public:
 	~Form();
 	Form(const Form &rhs);
 	Form &operator=(const Form &rhs);
-	void	beSigned(const Bureaucrat &a);
+	void	beSigned(Bureaucrat &h);
 };
 
 std::ostream &operator<<(std::ostream &out, const Form &rhs);

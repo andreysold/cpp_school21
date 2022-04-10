@@ -5,9 +5,12 @@
 #include <fstream>
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
+
+class Form;
 class Bureaucrat
 {
 private:
+	Bureaucrat();
 	const std::string _name;
 	int _grade;
 public:
@@ -20,7 +23,6 @@ public:
 		virtual const char * what() const throw();
 	};
 	Bureaucrat(std::string name, int grade);
-	Bureaucrat();
 	~Bureaucrat();
 	Bureaucrat(const Bureaucrat &other);
 	Bureaucrat	&operator=(const Bureaucrat &other);
@@ -30,7 +32,7 @@ public:
 //	void	setGrage(void); // ?
 	void	incGrage(void);
 	void	decGrade(void);
-	void	signForm(const Form &form);
+	void	signForm(Form &form);
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &rhs);

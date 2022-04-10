@@ -5,9 +5,9 @@
 
 Dog::Dog()
 {
+	std::cout << "Dog constructor called" << std::endl;
     this->type = "Dog";
 	this->Dptr = new Brain();
-    std::cout << "Dog constructor called" << std::endl;
 };
 
 Dog::~Dog()
@@ -18,20 +18,20 @@ Dog::~Dog()
 
 Dog::Dog(const Dog &other)
 {
+	std::cout << "Dog copy constructor called" << std::endl;
 	this->Dptr = new Brain();
-    std::cout << "Dog copy constructor called" << std::endl;
 	(*this) = other;
 };
 
 Dog &Dog::operator=(const Dog &other)
 {
-    std::cout << "Dog copy assigment operator called" << std::endl;
+    std::cout << "Dog  assigment operator called" << std::endl;
 	*this->Dptr = *other.Dptr;
 	this->type = other.type;
     return (*this);
 };
 
-void    Dog::makeSound(void) const
+void    Dog::makeSound() const
 {
     std::cout << "GAV GAV GAV SUKA" << std::endl;
 };

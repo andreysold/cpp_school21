@@ -6,9 +6,9 @@
 
 Cat::Cat()
 {
+    std::cout << "Cat constructor called" << std::endl;
     this->type = "Cat";
 	this->Cptr = new Brain();
-    std::cout << "Cat constructor called" << std::endl;
 };
 
 Cat::~Cat()
@@ -19,14 +19,14 @@ Cat::~Cat()
 
 Cat::Cat(const Cat &other)
 {
+	std::cout << "Cat copy constructor called" << std::endl;
 	this->Cptr = new Brain();
 	*this = other;
-    std::cout << "Cat copy constructor called" << std::endl;
 };
 
 Cat &Cat::operator=(const Cat &other)
 {
-    std::cout << "Cat copy assigment operator called" << std::endl;
+    std::cout << "Cat  assigment operator called" << std::endl;
     *this->Cptr = *other.Cptr;
 	this->type = other.type;
     return (*this);

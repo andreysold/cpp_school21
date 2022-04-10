@@ -5,7 +5,7 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 #include "Brain.hpp"
-#define SIZE 10
+#define SIZE 2
 int main(void)
 {
 //    std::cout << "Animal, Cat, Dog.." << std::endl;
@@ -33,7 +33,7 @@ int main(void)
 //		delete t1;
 //		delete t2;
 //    }
-	std::cout << "BRAIN BRAIN BRAIN.." << std::endl;
+/*	std::cout << "BRAIN BRAIN BRAIN.." << std::endl;
 	{
 		Animal	*meta[SIZE];
 		int i = 0;
@@ -51,7 +51,13 @@ int main(void)
 			delete meta[i];
 		}
 
-	}
+	}*/
+	Dog a;
+	Dog tmp;
+//	b = a;
+//	{
+		tmp = a;
+//	}
 
     return (0);
 }

@@ -11,6 +11,11 @@ ClapTrap::ClapTrap() : hitPoint(10), energyPoint(10), damagePoint(0)
 {
     std::cout << "Constructor called" << std::endl;
 };
+ClapTrap::ClapTrap(std::string name, unsigned int hitPoint, unsigned int energyPoint, unsigned  int damagePoint):
+name(name), hitPoint(hitPoint), energyPoint(energyPoint), damagePoint(damagePoint)
+{
+	std::cout << "ClapTrap constructor called" << std::endl;
+};
 
 ClapTrap::~ClapTrap()
 {
@@ -34,7 +39,12 @@ ClapTrap::ClapTrap(const ClapTrap & other)
     *this = other;
 };
 
-
+void ClapTrap::displayInfo(void)
+{
+	std::cout << "Damage " << this->damagePoint << std::endl;
+	std::cout << "Energy " << this->energyPoint << std::endl;
+	std::cout << "HitPoint " << this->hitPoint << std::endl;
+};
 
 ClapTrap    &ClapTrap::operator=(const ClapTrap &other)
 {

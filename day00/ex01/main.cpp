@@ -25,6 +25,8 @@ int main(void)
             break ;
         else if (command == "SEARCH")
             book.search();
+		else
+			std::cout << "ERROR COMMAND" << std::endl;
     }
     return (0);
 }

@@ -1,18 +1,19 @@
 #include <iostream>
 #include "Fixed.hpp"
 #include <fstream>
+#include <cmath>
 Fixed::Fixed() : _fixNumPoint(0) {
     std::cout << "default constructor called" << std::endl;
 };
 
 Fixed::~Fixed() {
     std::cout << "default destructor called" << std::endl;
-}
+};
 
 Fixed::Fixed(int const number) {
     std::cout << "Int constructor called" << std::endl;
     this->_fixNumPoint = number << this->_fracBits;
-}
+};
 
 Fixed::Fixed(float const number) {
     float power;
@@ -54,7 +55,7 @@ int Fixed::getRawBits(void) const {
 void    Fixed::setRawbits(int const number)
 {
     this->_fixNumPoint = number;
-}
+};
 
 std::ostream &operator<<(std::ostream &os, Fixed const &instance)
 {

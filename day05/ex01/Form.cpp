@@ -2,8 +2,7 @@
 #include "Form.hpp"
 #include <fstream>
 
-
-
+class Bureaucrat;
 
 Form::Form():_gradeExecute(0), _gradeSign(0)
 {
@@ -14,9 +13,9 @@ Form::Form(std::string name, bool checker, int gradeSign, int gradeExecute)
 : _name(name), _checker(checker), _gradeSign(gradeSign), _gradeExecute(gradeExecute)
 {
 	if (this->_gradeSign < 1 || this->_gradeExecute < 1)
-		throw GradeTooHighException();
+		throw Form::GradeTooHighException();
 	if (this->_gradeExecute > 150 || this->_gradeSign > 150)
-		throw GradeTooLowException();
+		throw Form::GradeTooLowException();
 	std::cout << "Form constructor called" << std::endl;
 };
 
@@ -39,7 +38,7 @@ Form	&Form::operator=(const Form &rhs)
 
 std::ostream &operator<<(std::ostream &out, const Form &rhs)
 {
-	out << " ";
+	out << "AAA";
 	return (out);
 };
 
@@ -53,10 +52,20 @@ const char *Form::GradeTooLowException::what() const throw()
 	return ("Form: Exception: grade to low");
 };
 
-void	Form::beSigned(const Bureaucrat &a)
-{
-	if (h.getGrade() <= this->_gradeExecute)
-		this->_checker = true;
-	else
-		GradeTooLowException();
+void	Form::beSigned(Bureaucrat &h) {
+//	try {
+			if (h.getGrade() <= this->_gradeSign) {
+				this->_checker = true;
+				std::cout << "AAA" << std::endl;
+			}
+			else {
+				 throw  GradeTooLowException();
+			}
+//		}
+//	}
+//	catch (std::exception &p)
+//	{
+//		std::cerr << p.what() << std::endl;
+//	}
+
 };

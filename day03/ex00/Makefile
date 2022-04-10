@@ -1,4 +1,4 @@
-CC = clang++
+CC = c++
 
 NAME = ClapTrap
 

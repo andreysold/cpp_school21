@@ -75,5 +75,10 @@ void    ClapTrap::beRepaired(unsigned int amount)
         std::cout << "ClapTrap " << this->name << " lost 1 energyPoint and he/she has " << this->energyPoint << " energyPoints" << std::endl;
     }
     else
-        std::cout << "ClapTrap " << this->name << "dont have enoght energyPoint on func beRepared" << std::endl;
+        std::cout << "ClapTrap " << this->name << " dont have enough energyPoint on func beRepared" << std::endl;
 };
+
+unsigned int	ClapTrap::getenergy()
+{
+	return (this->energyPoint);
+}
