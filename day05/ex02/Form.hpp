@@ -21,17 +21,20 @@ public:
 	class GradeTooLowException:public std::exception {
 		virtual const char * what() const throw();
 	};
+	class NotSigned:public std::exception {
+		virtual const char * what() const throw();
+	};
 	Form();
 	Form(std::string name, bool checker, int gradeSign, int gradeExecute);
 	~Form();
 	Form(const Form &rhs);
 	Form &operator=(const Form &rhs);
 	void	beSigned(Bureaucrat &h);
-	virtual void	example(void) const = 0;
 	std::string getName() const;
 	bool		getStatus() const;
 	int 		getGradeSign() const;
 	int 		getGradeExecute() const;
+	virtual void		execute(const Bureaucrat & executor) const = 0;
 };
 
 std::ostream &operator<<(std::ostream &out, const Form &rhs);

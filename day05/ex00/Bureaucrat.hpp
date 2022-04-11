@@ -29,7 +29,6 @@ public:
 //	void	setGrage(void); // ?
 	void	incGrage(void);
 	void	decGrade(void);
-
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &rhs);
