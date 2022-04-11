@@ -93,4 +93,9 @@ void	Bureaucrat::signForm(Form &form)
 		std::cerr << e.what() << std::endl;
 	}
 
+};
+
+void	Bureaucrat::executeForm(Form & const form)
+{
+
 }

@@ -1,6 +1,6 @@
 CC = c++
 
-NAME = bureaucrat
+NAME = Form
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 

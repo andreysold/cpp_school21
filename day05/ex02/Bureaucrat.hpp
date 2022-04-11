@@ -33,6 +33,7 @@ public:
 	void	incGrage(void);
 	void	decGrade(void);
 	void	signForm(Form &form);
+	void	executeForm(Form & const form);
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &rhs);
