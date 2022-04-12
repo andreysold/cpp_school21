@@ -50,6 +50,7 @@ const char *Form::NotSigned::what() const throw()
 	return ("Form not singed");
 }
 void	Form::beSigned(Bureaucrat &h) {
+//		std::cout << "AAAA" << std::endl;
 		if (h.getGrade() <= this->_gradeSign && h.getGrade() > 0)
 			this->_checker = true;
 		else {

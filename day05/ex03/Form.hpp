@@ -29,7 +29,7 @@ public:
 	};
 	Form();
 	Form(std::string name, bool checker, int gradeSign, int gradeExecute);
-	~Form();
+	virtual ~Form();
 	Form(const Form &rhs);
 	Form &operator=(const Form &rhs);
 	void	beSigned(Bureaucrat &h);

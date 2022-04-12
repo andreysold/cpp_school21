@@ -1,21 +1,43 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
 int main()
 {
-	Bureaucrat *b = new Bureaucrat("Zhopa", 1);
-	RobotomyRequestForm *f1 = new RobotomyRequestForm("Zloy");
-	b->decGrade();
-	b->signForm(*f1);
-	std::cout << "PRESIDENT" << std::endl;
-	PresidentialPardonForm *pre = new PresidentialPardonForm("Babaluh");
-	b->signForm(*pre);
-//	displayInfo();
-	delete f1;
-	delete b;
-//	delete f2;
-	return (0);
+
+	Bureaucrat	Jim("Jim", -99);
+	Bureaucrat	Linda("Linda", 1);
+	Bureaucrat	John("John", 150);
+
+	ShrumbberyCreationForm	shrubberyForm("Home");
+	std::cout << shrubberyForm << std::endl;
+	RobotomyRequestForm		robotomyForm("Cat");
+	std::cout << robotomyForm << std::endl;
+	PresidentialPardonForm	presidentialForm("Linda");
+	std::cout << presidentialForm << std::endl << std::endl;
+
+	Jim.signForm(robotomyForm);
+	robotomyForm.execute( Jim);
+	shrubberyForm.execute(Jim);
+	Jim.signForm(shrubberyForm);
+	Jim.executeForm(shrubberyForm);
+	John.executeForm(shrubberyForm);
+	Linda.signForm(presidentialForm);
+	Linda.executeForm(shrubberyForm);
+	std::cout << std::endl;
+
+	Linda.signForm(shrubberyForm);
+	Linda.signForm(robotomyForm);
+	Linda.signForm(presidentialForm);
+	Linda.executeForm(shrubberyForm);
+	Linda.executeForm(robotomyForm);
+	Linda.executeForm(presidentialForm);
+	std::cout << std::endl;
+
+	John.signForm(robotomyForm);
+	John.signForm(presidentialForm);
+	John.executeForm(robotomyForm);
+	John.executeForm(presidentialForm);
+	return 0;
 }

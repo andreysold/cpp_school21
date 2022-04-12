@@ -3,7 +3,7 @@
 #include <cmath>
 #include <fstream>
 RobotomyRequestForm::RobotomyRequestForm(std::string target)
-:Form("DefaultRobotomyForm",false,  72, 45), _target(target){};
+:Form("RobotomyRequestForm",false,  72, 45), _target(target){};
 
 RobotomyRequestForm::RobotomyRequestForm() :Form("DefaultRobotomyForm",false,  45, 72){};
 

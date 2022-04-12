@@ -2,7 +2,7 @@
 
 PresidentialPardonForm::PresidentialPardonForm(): Form("DefaultPresidentForm", false, 150, 150){};
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target): Form("DefaultPresidentForm", false, 25,5 ), _target(target){};
+PresidentialPardonForm::PresidentialPardonForm(std::string target): Form("PresidentialPardonForm", false, 25,5 ), _target(target){};
 
 PresidentialPardonForm::~PresidentialPardonForm() {};
 

@@ -4,8 +4,9 @@
 #include <fstream>
 
 ShrumbberyCreationForm::ShrumbberyCreationForm(std::string target)
-:Form("DefaultShrumForm", false, 145, 137), _target(target){};
+:Form("ShrubberyCreationFrom", false, 145, 137), _target(target){};
 
+ShrumbberyCreationForm::ShrumbberyCreationForm(): Form("ShrubberyCreationFrom", false, 150, 150) {}
 ShrumbberyCreationForm::~ShrumbberyCreationForm(){};
 
 ShrumbberyCreationForm::ShrumbberyCreationForm(const ShrumbberyCreationForm &rhs):Form(rhs), _target(rhs._target) {};
