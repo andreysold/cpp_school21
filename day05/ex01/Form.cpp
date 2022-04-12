@@ -50,7 +50,7 @@ const char *Form::GradeTooLowException::what() const throw() {
 };
 
 void	Form::beSigned(Bureaucrat &h) {
-	try {
+//	try {
 		if (h.getGrade() <= this->_gradeSign)
 			this->_checker = true;
 		else {
@@ -58,11 +58,11 @@ void	Form::beSigned(Bureaucrat &h) {
 			throw Form::GradeTooLowException();
 		}
 		std::cout << "Bureaucrat " << h.getName() << " signed " << this->_name << std::endl;
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+//	}
+//	catch (std::exception &e)
+//	{
+//		std::cerr << e.what() << std::endl;
+//	}
 };
 
 std::string	Form::getName() const {
