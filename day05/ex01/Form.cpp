@@ -4,17 +4,20 @@
 
 class Bureaucrat;
 
-Form::Form():_gradeExecute(150), _gradeSign(150) {
-	std::cout << "Form constructor called" << std::endl;
-};
+Form::Form():_gradeExecute(150), _gradeSign(150) {};
 
 Form::Form(std::string name, bool checker, int gradeSign, int gradeExecute)
 : _name(name), _checker(checker), _gradeSign(gradeSign), _gradeExecute(gradeExecute) {
-	if (this->_gradeSign < 1 || this->_gradeExecute < 1)
-		throw Form::GradeTooHighException();
-	if (this->_gradeExecute > 150 || this->_gradeSign > 150)
-		throw Form::GradeTooLowException();
-	std::cout << "Form constructor called" << std::endl;
+	try {
+		if (this->_gradeSign < 1 || this->_gradeExecute < 1)
+			throw Form::GradeTooHighException();
+		if (this->_gradeExecute > 150 || this->_gradeSign > 150)
+			throw Form::GradeTooLowException();
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 };
 
 Form::~Form() {

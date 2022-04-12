@@ -3,7 +3,6 @@
 
 Bureaucrat::Bureaucrat()
 {
-	std::cout << "Bureaucrat constructor called" << std::endl;
 };
 
 Bureaucrat::Bureaucrat(std::string name, int grade):_name(name), _grade(grade)
@@ -12,24 +11,20 @@ Bureaucrat::Bureaucrat(std::string name, int grade):_name(name), _grade(grade)
 		throw Bureaucrat::GradeTooHighException();
 	else if (this->_grade > 150)
 		throw Bureaucrat::GradeTooLowException();
-	std::cout << "Bureaucrat constructor called" << std::endl;
 };
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "Bureaucrat destructor called" << std::endl;
 };
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other):_name(other._name)
 {
-	std::cout << "Bureaucrat copy constructor called" << std::endl;
 	(*this) = other;
 };
 
 Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &other)
 {
 	this->_grade = other._grade;
-	std::cout << "Bureaucrat assigment operator called" << std::endl;
 	return (*this);
 };
 
@@ -46,15 +41,19 @@ int Bureaucrat::getGrade() const
 void	Bureaucrat::incGrage(void)
 {
 	this->_grade--;
-	if (this->_grade < 1)
+	if (this->_grade < 1) {
+		this->_grade++;
 		throw Bureaucrat::GradeTooHighException();
+	}
 };
 
 void	Bureaucrat::decGrade(void)
 {
 	this->_grade++;
-	if (this->_grade > 150)
+	if (this->_grade > 150) {
+		this->_grade--;
 		throw Bureaucrat::GradeTooLowException();
+	}
 }
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
