@@ -25,7 +25,7 @@ public:
 	};
 	void	move();
 	void	disInt(long num);
-	void	disFloat(float num);
+	void	disFloat(double num);
 	void	disChar(int num);
 	void	disDouble(double num);
 };

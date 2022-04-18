@@ -32,21 +32,23 @@ void	Cast::move()
 	{
 		char c = this->num[0];
 		disChar(c);
-		disInt(c);
+		disInt(static_cast<int>(c));
+		disFloat(static_cast<float>(c));
+		disDouble(static_cast<double>(c));
 	}
-	else if (strchr(this->num, '.'))
+	else if (strchr(this->num, '.') && strchr(this->num, 'f'))
 	{
 		float c = strtod(this->num, NULL);
 		disChar(c);
-		disInt(c);
-		disFloat(c);
-		disDouble(c);
+		disInt(static_cast<int>(c));
+		disFloat(static_cast<float>(c));
+		disDouble(static_cast<double>(c));
 	}
 	else
 	{
 		double c = strtod(this->num, NULL);
 		disChar(static_cast<int>(c));
-		disInt(c);
+		disInt(static_cast<long>(c));
 		disFloat(c);
 		disDouble(c);
 	}
@@ -71,7 +73,7 @@ void	Cast::disInt(long num)
 	}
 };
 
-void	Cast::disFloat(float num)
+void	Cast::disFloat(double num)
 {
 	std::cout.precision(1);
 	std::cout << "Float: " << std::fixed << num << "f" << std::endl;
