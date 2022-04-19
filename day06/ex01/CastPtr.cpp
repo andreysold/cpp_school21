@@ -10,11 +10,11 @@ CastPtr::~CastPtr(){};
 CastPtr::CastPtr(const CastPtr &rhs)
 :_name(rhs._name), _address(rhs._address), _id(rhs._id), _age(rhs._age){};
 
-//CastPtr	&CastPtr::operator=(const CastPtr &rhs)
-//{
-//	(*this) = rhs;
-//	return (*this);
-//};
+CastPtr	&CastPtr::operator=(const CastPtr &rhs)
+{
+	(*this) = rhs;
+	return (*this);
+};
 
 uintptr_t	CastPtr::serialize(CastPtr &rhs)
 {
