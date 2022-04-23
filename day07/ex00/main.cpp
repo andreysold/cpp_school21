@@ -1,25 +1,25 @@
 #include <iostream>
 #include "whatever.hpp"
-template < typename T1 >
+template < typename T >
 
-void	swap( T1 &x, T1 &y)
+void	swap( T &x, T &y)
 {
-	T1 tmp;
+	T tmp;
 	tmp = x;
 	x = y;
 	y = tmp;
 };
 
-template < typename T2 >
+template < typename T >
 
-T2	min(T2 const x, T2 const y)
+T	min(T const x, T const y)
 {
 	return ((x < y) ? x:y);
 };
 
-template < typename T3 >
+template < typename T >
 
-T3	max(T3 const x, T3 const y)
+T	max(T const x, T const y)
 {
 	return ((x >= y) ? x:y);
 }
