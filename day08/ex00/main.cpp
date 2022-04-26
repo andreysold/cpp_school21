@@ -2,59 +2,67 @@
 #include <iostream>
 #include "easyfind.hpp"
 #include <exception>
+#include <iterator>
 
 
-class Exe
-{
-public:
-	class GradeToLow:public std::exception {
-	public:
-		virtual const char * what() const throw();
-	};
-};
-
-
-//const char *GradeToLow::what() const throw() {return "ERROR";};
-
-const char *Exe::GradeToLow::what() const throw() {return "ERROR";}
-template <typename T>
-T	&find_value(std::vector<T> &arr, int val)
-{
-	typename std::vector<T>::iterator it = arr.begin();
-	typename std::vector<T>::iterator ite = arr.end();
-	std::cout << "start = " << *it << " end = " << *ite << std::endl;
-//	std::cout << arr.size();
-	it = std::find(arr.begin(), arr.end(), val);
-	std::cout << *it << " " << static_cast<T>(val) << std::endl;
-	if (it == arr.end() && *it != static_cast<T>(val))
-		throw Exe::GradeToLow();
-//	for (;it != ite; ++it)
-//	{
-//		if (*it == val)
-//			break;
-//		if (*it == *ite) {
-//			std::cout << "AAA" << std::endl;
-//			throw Exe::GradeToLow();
+//template <class T>
+//T	&find_value(T &arr, int  val)
+//{
+//	T::iter
+//	std::cout << val << std::endl;
+//	std::cout << arr << std::endl;
+//	std::cout <<
+//	typename T::iterator pos = ;
+//	typename std::iterator<T> it = arr.begin();
+//	typename std::vector<T>::iterator ite = arr.end();
+//	it = std::find(arr.begin(), arr.end(), val);
+//	if (it == arr.end() && *it != static_cast<T>(val))
+//		throw Exe::GradeToLow();
+//	return (it);
+//	return (static_cast<T>(val));
 //
-//		}
-//	}
-//	std::cout << *it << std::endl;
-	return (*it);
-}
+//}
+
+
+//template <class T>
+//
+//void find_v(T &arr, int val)
+//{
+//	std::arr<T>::ite
+////	typename std::iterator<T> it = ar
+//}
 
 int main()
 {
+
 	std::vector<int> v;
+
 	for (int i = 0; i < 11; i++) {
 		v.push_back(i);
 	}
 	try {
-		int k = find_value(v, 10);
+		int k;
+		k = find_value(v, 0);
 		std::cout << k << std::endl;
 	}
 	catch (Exe::GradeToLow &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::list<int> fv;
+	for (int i = 0; i < 11; i++) {
+		fv.push_back(10 - i);
+	}
+	try
+	{
+		float k = find_value(fv, 1);
+		std::cout << k << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout << v << std::endl;
+	std::cout << fv << std::endl;
 	return (0);
 }
