@@ -36,10 +36,10 @@ int main()
 {
 
 	std::vector<int> v;
-
-	for (int i = 0; i < 11; i++) {
+	for (int i = 0; i < 10; i++) {
 		v.push_back(i);
 	}
+	std::cout << v << std::endl;
 	try {
 		int k;
 		k = find_value(v, 0);

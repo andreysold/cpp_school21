@@ -25,7 +25,6 @@ public:
 const char *Exe::GradeToLow::what() const throw() {return "Exception: <Didnt find value>";}
 
 template <typename T>
-
 std::ostream &operator<<(std::ostream &out, T &v)
 {
 	typename T::const_iterator it = v.begin();
