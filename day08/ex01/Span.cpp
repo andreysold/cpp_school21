@@ -49,7 +49,7 @@ int		Span::shortestSpan()
 	if (v.size() <= 1)
 		throw Span::GradeToLow();
 	std::sort(v.begin(), v.end());
-	for (int i = 0; i < v.size() - 1; i++) {
+	for (unsigned int i = 0; i < v.size() - 1; i++) {
 		tmp = v[i + 1] - v[i];
 		if (tmp < min)
 			min = tmp;

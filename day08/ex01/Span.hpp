@@ -6,7 +6,7 @@
 class Span
 {
 private:
-	int _num;
+	unsigned int _num;
 	std::vector<int> v;
 	Span();
 public:
