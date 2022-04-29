@@ -19,6 +19,9 @@ clean:
 		@rm -f $(OBJS)
 		@echo ".o Deleted 🗿"
 
+%.o: %.cpp	$(SRC) $(MAKE)
+		@$(CC) $(FLAGS) -c $< -o $@
+
 fclean: 	clean
 			@rm -f	 $(NAME)
 			@rm -f	 $(FILE)

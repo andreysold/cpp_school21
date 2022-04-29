@@ -27,12 +27,12 @@ int Contact::getKeyLen(int i) {
 	return (this->key[i].size());
 }
 
-void	Contact::getTen(int idx) {
-	for (int i; i < 9; i++) {
-		std::cout << this->value[i];
-	}
-}	
-void    Contact::getInfo(int idx) {
+//void	Contact::getTen(int idx) {
+//	for (int i; i < 9; i++) {
+//		std::cout << this->value[i];
+//	}
+//}
+void    Contact::getInfo(void) {
 	for (int i = 0; i < 5; i++) {
 		std::cout << this->key[i] << ": ";
 		std::cout << this->value[i] << "\n";

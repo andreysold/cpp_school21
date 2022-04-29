@@ -59,7 +59,7 @@ void    PhoneBook::search() {
 		{
 			for (int i = 0; i < count; i++) {
 				if (i == command)
-					people[command].getInfo(i);
+					people[command].getInfo();
 			}
 		}
 	}

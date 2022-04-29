@@ -33,7 +33,7 @@ void    Harl::complain(std::string level)
 {
 	int i = 0;
 	std::string levelUp[4] = {"debug", "info", "warning", "error"};
-	void	(Harl::*ptrFunc[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+//	void	*ptrFunc[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	circleCd(levelUp, level, &i);
 	switch (i)
 	{

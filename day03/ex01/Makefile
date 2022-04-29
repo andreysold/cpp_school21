@@ -16,6 +16,9 @@ all:
 $(NAME): $(OBJS)
 	$(CC) $(FLAGS) -o $(NAME) $(OBJS)
 
+%.o: %.cpp	$(SRC) $(MAKE)
+		@$(CC) $(FLAGS) -c $< -o $@
+
 clean:
 	@rm -f $(OBJS)
 

@@ -14,6 +14,10 @@ all:
 $(NAME): $(OBJS)
 		@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 		@echo "ex00 is ready to use ✅ "
+
+%.o: %.cpp	$(SRC) $(MAKE)
+		@$(CC) $(FLAGS) -c $< -o $@
+
 clean:
 			@$(RM)	$(OBJS)
 			@echo ".o Deleted 🗿"

@@ -4,7 +4,7 @@
 
 class Bureaucrat;
 
-Form::Form():_gradeExecute(150), _gradeSign(150) {};
+Form::Form():_gradeSign(150), _gradeExecute(150) {};
 
 Form::Form(std::string name, bool checker, int gradeSign, int gradeExecute)
 : _name(name), _checker(checker), _gradeSign(gradeSign), _gradeExecute(gradeExecute) {
@@ -24,7 +24,7 @@ Form::~Form() {
 	std::cout << "Form destructor called" << std::endl;
 };
 
-Form::Form(const Form &rhs):_gradeSign(rhs._gradeSign), _gradeExecute(rhs._gradeExecute), _name(rhs._name), _checker(rhs._checker){
+Form::Form(const Form &rhs):_name(rhs._name), _checker(rhs._checker), _gradeSign(rhs._gradeSign), _gradeExecute(rhs._gradeExecute){
 	std::cout << "Copy constructor called" << std::endl;
 };
 

@@ -109,7 +109,7 @@ bool    Fixed::operator<=(Fixed const &other) const
 
 bool    Fixed::operator==(Fixed const &other) const
 {
-    if (this->toFloat() == this->toFloat())
+    if (this->toFloat() == other.toFloat())
         return (true);
     return (false);
 };

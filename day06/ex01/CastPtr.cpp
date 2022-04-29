@@ -3,16 +3,19 @@
 CastPtr::CastPtr() {};
 
 CastPtr::CastPtr(unsigned int id, unsigned int age, std::string name, std::string address)
-:_name(name), _address(address), _id(id), _age(age){};
+:_id(id), _age(age), _name(name), _address(address) {};
 
 CastPtr::~CastPtr(){};
 
 CastPtr::CastPtr(const CastPtr &rhs)
-:_name(rhs._name), _address(rhs._address), _id(rhs._id), _age(rhs._age){};
+:_id(rhs._id), _age(rhs._age), _name(rhs._name), _address(rhs._address){};
 
 CastPtr	&CastPtr::operator=(const CastPtr &rhs)
 {
-	(*this) = rhs;
+	this->_id = rhs._id;
+	this->_age = rhs._age;
+	this->_name = rhs._name;
+	this->_address = rhs._address;
 	return (*this);
 };
 

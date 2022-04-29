@@ -22,7 +22,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal &other)
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 {
     std::cout << "WrongAnimal assigment operator called" << std::endl;
-    (*this) = other;
+    this->type = other.type;
     return (*this);
 };
 

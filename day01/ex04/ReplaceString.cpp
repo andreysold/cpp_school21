@@ -21,7 +21,7 @@ void    ReplaceString::ReplaceStr(std::string word1, std::string word2)
         }
     }
     std::ofstream new_file(this->file_name + ".replace");
-    int i = 0;
+    unsigned int i = 0;
     while (i < s2.size())
     {
         if (this->s2.substr(i, word1.size()) == word1)

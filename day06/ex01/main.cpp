@@ -27,6 +27,8 @@ struct Data
 int main()
 {
 	CastPtr	ptr(4, 20, "Andrey", "Moscow");
+	CastPtr	w(1,1,"a", "a");
+	w = ptr;
 	CastPtr *cast_ptr;
 	uintptr_t raw;
 	ptr.displayInfo();

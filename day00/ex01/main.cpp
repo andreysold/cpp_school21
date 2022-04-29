@@ -5,7 +5,6 @@
 
 int main(void)
 {
-    int flag = 1;
     std::string command;
     PhoneBook book;
     std::cout << "Hi, is is simple Phonebook on C++.\n";

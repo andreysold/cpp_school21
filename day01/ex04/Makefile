@@ -18,6 +18,9 @@ $(NAME): $(OBJS)
 	$(CC) $(FLAGS) -o $(NAME) $(OBJS)
 	@echo "ex04 is ready to use ✅ "
 
+%.o: %.cpp	$(SRC) $(MAKE)
+		@$(CC) $(FLAGS) -c $< -o $@
+
 clean:
 			@rm -f	$(OBJS)
 			@echo ".o Deleted 🗿"

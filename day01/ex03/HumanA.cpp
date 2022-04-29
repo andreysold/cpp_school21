@@ -2,7 +2,7 @@
 #include "HumanA.hpp"
 #include "Weapon.hpp"
 
-HumanA::HumanA(std::string tame, Weapon &eb):name(tame), ex(eb) {};
+HumanA::HumanA(std::string tame, Weapon &eb): ex(eb), name(tame) {};
 
 HumanA::~HumanA(){};
 

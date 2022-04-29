@@ -43,7 +43,7 @@ Form	*Intern::makeForm(const std::string &nameForm, const std::string &targetFor
 	}
 	catch (Intern::NotSignForm &ex)
 	{
-		std::cerr << "Intern cant create " << newForm->getName() << " because" << ex.what() << std::endl;
+		std::cerr << "Intern cant create " << " because" << ex.what() << std::endl;
 	}
 	return (newForm);
 }

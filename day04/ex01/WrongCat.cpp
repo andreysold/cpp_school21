@@ -22,7 +22,7 @@ WrongCat::WrongCat(const WrongCat &other)
 WrongCat	&WrongCat::operator=(const WrongCat &other)
 {
 	std::cout << "Copy assigment operator called" << std::endl;
-	(*this) = other;
+	this->type = other.type;
 	return (*this);
 };
 

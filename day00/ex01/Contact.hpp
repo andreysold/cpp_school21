@@ -12,7 +12,7 @@ class Contact {
         ~Contact();
         void    getTen(int idx);
         void    setInfo(std::string value, int i);
-        void    getInfo(int idx);
+        void    getInfo(void);
         std::string    getKey(int i);
         std::string    getValue(int i);
         int     getKeyLen(int i);
